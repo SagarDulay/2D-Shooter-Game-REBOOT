@@ -2,7 +2,12 @@ using UnityEngine;
 
 public class Health
 {
-    public float healthPoints;
+    private float healthPoints;
+
+    public float GetHealthPoints()
+    {
+        return healthPoints;
+    }
 
 
 
