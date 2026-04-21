@@ -2,17 +2,17 @@ using UnityEngine;
 
 public class Enemy : Character
 {
-    public Transform playerTargetTransform;
+    private Transform playerTargetTransform;
 
 
 
-    public override void Start()
+    protected override void Start()
     {
         base.Start();
         playerTargetTransform = FindAnyObjectByType<Player>().transform;
     }
 
-    public virtual void Update()
+    protected virtual void Update()
     {
         movementDirection = playerTargetTransform.position - transform.position;
         movementDirection = movementDirection.normalized;

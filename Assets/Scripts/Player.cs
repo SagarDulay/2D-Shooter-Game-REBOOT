@@ -8,4 +8,10 @@ public class Player : Character
         movementDirection.y = Input.GetAxisRaw("Vertical");
         Move();
     }
+
+    public override void Dash()
+    {
+
+    }
+    
 }

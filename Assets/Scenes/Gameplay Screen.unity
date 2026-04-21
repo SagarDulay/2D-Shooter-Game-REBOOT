@@ -459,6 +459,64 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3821975421334443044, guid: 7c418bbecba8a824e8701811a7c5a004, type: 3}
   m_PrefabInstance: {fileID: 4767493504890910438}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1040879588 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7967034998672210204, guid: 7c418bbecba8a824e8701811a7c5a004, type: 3}
+  m_PrefabInstance: {fileID: 4767493504890910438}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38e24855840cfb64697a66ca0c1cbc8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player
+--- !u!1 &1571341820
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1571341822}
+  - component: {fileID: 1571341821}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1571341821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571341820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c6afc59f78532547aedcadbf2bf84f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  randomCharacter: {fileID: 1717798777}
+  MainCharacter: {fileID: 1040879588}
+  randomEnemy: {fileID: 1985579998}
+--- !u!4 &1571341822
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571341820}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.54309, y: 5.91, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1715303270
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -516,6 +574,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7bed34dac0106242b9dac49d9c00041, type: 3}
+--- !u!114 &1717798777 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 777832847921702945, guid: b7bed34dac0106242b9dac49d9c00041, type: 3}
+  m_PrefabInstance: {fileID: 751696519}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a1622a1e97f11d44b7c4f61fd05c038, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy
 --- !u!1 &1730106492
 GameObject:
   m_ObjectHideFlags: 0
@@ -711,6 +780,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7bed34dac0106242b9dac49d9c00041, type: 3}
+--- !u!114 &1985579998 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 777832847921702945, guid: b7bed34dac0106242b9dac49d9c00041, type: 3}
+  m_PrefabInstance: {fileID: 1146249713194465788}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a1622a1e97f11d44b7c4f61fd05c038, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy
 --- !u!1001 &1146249713194465788
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -842,3 +922,4 @@ SceneRoots:
   - {fileID: 1909596817}
   - {fileID: 681622166}
   - {fileID: 751696519}
+  - {fileID: 1571341822}

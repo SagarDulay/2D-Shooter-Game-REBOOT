@@ -1,18 +1,18 @@
 using UnityEngine;
 
-public class Character : MonoBehaviour
+public abstract class Character : MonoBehaviour
 {
-    [SerializeField]private float moveSpeed;
-    public Vector2 movementDirection;
+    protected Vector2 movementDirection;
+    protected bool isDead;
 
-    private bool isDead;
-    
-    public Rigidbody2D rigidbodyModule;
+    [SerializeField] protected float moveSpeed;
+    [SerializeField] protected Rigidbody2D rigidbodyModule;
+
     public Health healthModule;
 
 
 
-    public virtual void Start()
+    protected virtual void Start()
     {
         healthModule = new Health(100);
 
@@ -24,10 +24,11 @@ public class Character : MonoBehaviour
     }
 
 
-    public void Dash()
+    public virtual void Dash()
     {
 
     }
+    
 
 
     public virtual void Attack()
