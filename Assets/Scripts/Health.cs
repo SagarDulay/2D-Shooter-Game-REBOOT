@@ -9,8 +9,6 @@ public class Health
         return healthPoints;
     }
 
-
-
     public void IncreaseHealth(float ToIncrease)
     {
         healthPoints += ToIncrease;

@@ -2,23 +2,27 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private Character randomCharacter;
-    [SerializeField] private Player MainCharacter;
-    [SerializeField] private Enemy randomEnemy;
-
-
+    private Weapon weaponOption1;
+    private Weapon weaponOption2;
     void Start()
     {
-        if (randomCharacter.GetComponent<IDash>() != null)
-        {
+        weaponOption1 = new RangedWeapon(newFireRate:5.5f, newDamage:10);
+        weaponOption2 = new MeleeWeapon();
 
-        }
-        
+        FindAnyObjectByType<Player>().EquipWeapon(weaponOption1);
+
     }
 
-    
-    void Update()
+    private void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            FindAnyObjectByType<Player>().EquipWeapon(weaponOption1);
+        }
+
+        else if(Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            FindAnyObjectByType<Player>().EquipWeapon(weaponOption2);
+        }
     }
 }

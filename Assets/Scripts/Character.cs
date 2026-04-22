@@ -22,6 +22,11 @@ public abstract class Character : MonoBehaviour
     {
         rigidbodyModule.AddForce(movementDirection * moveSpeed * Time.fixedDeltaTime);
     }
+
+    public void Rotate(Vector3 rotationTarget)
+    {
+        transform.up = rotationTarget - transform.position;
+    }
     
     public virtual void Attack()
     {
