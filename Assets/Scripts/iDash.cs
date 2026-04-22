@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class iDash
+public interface IDash
 {
-    
+    public void Dash();
 }

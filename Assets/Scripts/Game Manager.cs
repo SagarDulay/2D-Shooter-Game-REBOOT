@@ -9,6 +9,10 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        if (randomCharacter.GetComponent<IDash>() != null)
+        {
+
+        }
         
     }
 

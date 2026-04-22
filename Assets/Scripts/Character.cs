@@ -22,15 +22,7 @@ public abstract class Character : MonoBehaviour
     {
         rigidbodyModule.AddForce(movementDirection * moveSpeed * Time.fixedDeltaTime);
     }
-
-
-    public virtual void Dash()
-    {
-
-    }
     
-
-
     public virtual void Attack()
     {
        
