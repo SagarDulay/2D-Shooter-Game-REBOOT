@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class RangedWeapon : Weapon
 {
-    [SerializeField] private GameObject projectilePrefab;
+    [SerializeField] private Bullet projectilePrefab;
+    [SerializeField] private Transform weaponMuzzle;
     [SerializeField] private float fireRate;
     
     public override void Use()
     {
-        Debug.Log("Gra ta ta ta");
+        
+        GameObject.Instantiate(projectilePrefab, weaponMuzzle.position, weaponMuzzle.rotation);
     }
 
     public float GetFireRate()
@@ -17,8 +19,10 @@ public class RangedWeapon : Weapon
         return fireRate;
     }
     
-    public RangedWeapon(float newFireRate, float newDamage)
+    public RangedWeapon(float newFireRate, float newDamage,Bullet newProjectile, Transform newMuzzle)
     {
+        projectilePrefab = newProjectile;
+        weaponMuzzle = newMuzzle;
         fireRate = newFireRate;
         damage = newDamage;
     }

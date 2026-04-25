@@ -1,28 +1,31 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
+
 {
-    private Weapon weaponOption1;
-    private Weapon weaponOption2;
+
+    [SerializeField] private List<Enemy> allSpawnedEnemies;
+
+    [SerializeField] private Enemy[] possibleEnemyPrefabs;
+
     void Start()
     {
-        weaponOption1 = new RangedWeapon(newFireRate:5.5f, newDamage:10);
-        weaponOption2 = new MeleeWeapon();
+        InvokeRepeating("SpawnRandomEnemy", 2f, 4f);
+   
+    }
+    private void SpawnRandomEnemy()
+    {
+        int amountOfIndexs = possibleEnemyPrefabs.Length;
+        int randomIndex = Random.Range(0, amountOfIndexs);
 
-        FindAnyObjectByType<Player>().EquipWeapon(weaponOption1);
+        Instantiate(possibleEnemyPrefabs[randomIndex]);
+
 
     }
 
-    private void Update()
+    void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            FindAnyObjectByType<Player>().EquipWeapon(weaponOption1);
-        }
 
-        else if(Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            FindAnyObjectByType<Player>().EquipWeapon(weaponOption2);
-        }
     }
 }
