@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private Transform enemiesParent;
 
+    [SerializeField] private int currentScore;
+
     void Start()
     {
         StartCoroutine( SpawnRandomEnemy() );
@@ -53,5 +55,21 @@ public class GameManager : MonoBehaviour
     public void EnemyKilled(Enemy deadEnemy)
     {
         allSpawnedEnemies.Remove(deadEnemy);
+        currentScore += 10;
+        
+    }
+
+    public int GetCurrentScore()
+    {
+        return currentScore;
+    }
+
+    public void RegisterHighScore()
+    {
+        if (currentScore > PlayerPrefs.GetInt("HighestScore"))
+        {
+            PlayerPrefs.SetInt("HighestScore", currentScore);
+        }
+        
     }
 }

@@ -4,21 +4,21 @@ public class Player : Character, IDash
 {
     [SerializeField] private Vector2 mousePosition;
     [SerializeField] private Transform weaponMuzzle;
-    [SerializeField] private Bullet projectilePrefab; 
-
-    private Weapon currentWeapon;
+     
+    [SerializeField] private Weapon currentWeapon;
 
     protected override void Start()
     {
-        currentWeapon = new RangedWeapon(
-            newFireRate:10,
-            newDamage:5, 
-            newProjectile:projectilePrefab, 
-            newMuzzle:weaponMuzzle
-            );
 
         base.Start();
+        healthModule.OnHealthZero += EndGame;
     } 
+
+    private void EndGame()
+    {
+        FindAnyObjectByType<GameManager>().RegisterHighScore();
+        Destroy(gameObject);
+    }
     void Update()
     {
         movementDirection.x = Input.GetAxisRaw("Horizontal");
@@ -45,7 +45,7 @@ public class Player : Character, IDash
     public override void Attack()
     {
         base.Attack();
-        currentWeapon.Use();
+        currentWeapon.Use(weaponMuzzle);
     }
     public void Dash()
     {

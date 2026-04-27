@@ -1,31 +1,22 @@
-using System;
-using Unity.VisualScripting;
 using UnityEngine;
+
+[CreateAssetMenu(menuName = "New Weapon")]
 
 public class RangedWeapon : Weapon
 {
     [SerializeField] private Bullet projectilePrefab;
-    [SerializeField] private Transform weaponMuzzle;
     [SerializeField] private float fireRate;
     
-    public override void Use()
+    public override void Use(Transform muzzle)
     {
         
-        GameObject.Instantiate(projectilePrefab, weaponMuzzle.position, weaponMuzzle.rotation);
+        Bullet clonedProjectile = GameObject.Instantiate(projectilePrefab, muzzle.position, muzzle.rotation);
+        clonedProjectile.damage = damage;
     }
 
     public float GetFireRate()
     {
         return fireRate;
     }
-    
-    public RangedWeapon(float newFireRate, float newDamage,Bullet newProjectile, Transform newMuzzle)
-    {
-        projectilePrefab = newProjectile;
-        weaponMuzzle = newMuzzle;
-        fireRate = newFireRate;
-        damage = newDamage;
-    }
-
     
 }

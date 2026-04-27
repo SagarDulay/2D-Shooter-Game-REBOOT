@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class MeleeWeapon : Weapon
 {
-    public override void Use()
+    public override void Use(Transform muzzle)
     {
-        Debug.Log("Slash");
+        
     }
 }

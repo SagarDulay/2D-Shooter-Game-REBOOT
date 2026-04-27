@@ -2,27 +2,43 @@ using UnityEngine;
 
 public class Enemy : Character
 {
-    private Transform playerTargetTransform;
+    private Player playerTargetTransform;
 
 
 
     protected override void Start()
     {
         base.Start();
-        playerTargetTransform = FindAnyObjectByType<Player>().transform;
+        playerTargetTransform = FindAnyObjectByType<Player>();
         healthModule.OnHealthZero += Die;
     }
 
     protected virtual void Update()
     {
-        movementDirection = playerTargetTransform.position - transform.position;
+        if(playerTargetTransform == null)
+        {
+            return;
+        }
+        
+        movementDirection = playerTargetTransform.transform.position - transform.position;
         movementDirection = movementDirection.normalized;
 
-        Rotate(playerTargetTransform.position);
+        Rotate(playerTargetTransform.transform.position);
 
         Move();
+
+        if(Vector2.Distance(transform.position, playerTargetTransform.transform.position) < 2f)
+        {
+            Attack();
+        }
     }
 
+    public override void Attack()
+    {
+        base.Attack();
+
+        playerTargetTransform.healthModule.DecreaseHealth(Time.deltaTime);
+    }
     private void Die()
     {
         FindAnyObjectByType<GameManager>().EnemyKilled(this);

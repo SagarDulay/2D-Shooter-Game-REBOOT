@@ -19,9 +19,9 @@ public class Health
     public void DecreaseHealth(float ToDecrease)
     {
         healthPoints -= ToDecrease;
-        Debug.Log(healthPoints);
         
-        if(GetHealthPoints() <= 10)
+        
+        if(GetHealthPoints() <= 0)
         {
             OnHealthZero?.Invoke();
         }

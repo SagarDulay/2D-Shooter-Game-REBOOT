@@ -4,6 +4,8 @@ public class Bullet : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rigidbodyModule;
     [SerializeField] private float bulletSpeed;
+
+    public float damage;
     void Start()
     {
         rigidbodyModule.linearVelocity = transform.up * bulletSpeed;
@@ -16,7 +18,7 @@ public class Bullet : MonoBehaviour
         {
             if(collison.rigidbody.CompareTag("Enemy"))
             {
-                collison.rigidbody.GetComponent<Enemy>().healthModule.DecreaseHealth(50);
+                collison.rigidbody.GetComponent<Enemy>().healthModule.DecreaseHealth(damage);
             }
           
         }
