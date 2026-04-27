@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
+using Unity.VisualScripting;
 
 public class GameManager : MonoBehaviour
 
@@ -8,24 +10,48 @@ public class GameManager : MonoBehaviour
     [SerializeField] private List<Enemy> allSpawnedEnemies;
 
     [SerializeField] private Enemy[] possibleEnemyPrefabs;
+    [SerializeField] private Transform[] possibleSpawnPoints;
+
+    [SerializeField] private Transform enemiesParent;
 
     void Start()
     {
-        InvokeRepeating("SpawnRandomEnemy", 2f, 4f);
+        StartCoroutine( SpawnRandomEnemy() );
    
     }
-    private void SpawnRandomEnemy()
+    private IEnumerator SpawnRandomEnemy()
     {
-        int amountOfIndexs = possibleEnemyPrefabs.Length;
-        int randomIndex = Random.Range(0, amountOfIndexs);
+        while(true) 
+        {
+            if (allSpawnedEnemies.Count < 15)
+            {
+                int amountOfIndexs = possibleEnemyPrefabs.Length;
+                int randomIndex = Random.Range(0, amountOfIndexs);
+                Enemy clonedEnemy = Instantiate(possibleEnemyPrefabs[randomIndex]);            
 
-        Instantiate(possibleEnemyPrefabs[randomIndex]);
+                allSpawnedEnemies.Add(clonedEnemy);
 
+                int amountOfSpawnPoints = possibleSpawnPoints.Length;
+                int randomIndexOfSpawnPoint = Random.Range(0, amountOfSpawnPoints);
+                Transform randomSpawnPoint = possibleSpawnPoints[randomIndexOfSpawnPoint];
+
+                clonedEnemy.transform.SetParent(enemiesParent);
+                clonedEnemy.transform.position = randomSpawnPoint.position;
+            }
+
+            yield return new WaitForSeconds(2f);
+
+        }
 
     }
 
     void Update()
     {
 
+    }
+
+    public void EnemyKilled(Enemy deadEnemy)
+    {
+        allSpawnedEnemies.Remove(deadEnemy);
     }
 }

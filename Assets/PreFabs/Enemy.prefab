@@ -155,7 +155,7 @@ GameObject:
   - component: {fileID: 7746685748846397942}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -189,9 +189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   moveSpeed: 10
-  movementDirection: {x: 0, y: 0}
   rigidbodyModule: {fileID: 7746685748846397942}
-  playerTargetTransform: {fileID: 3821975421334443044, guid: 7c418bbecba8a824e8701811a7c5a004, type: 3}
 --- !u!50 &7746685748846397942
 Rigidbody2D:
   serializedVersion: 5

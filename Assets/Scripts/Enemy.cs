@@ -10,6 +10,7 @@ public class Enemy : Character
     {
         base.Start();
         playerTargetTransform = FindAnyObjectByType<Player>().transform;
+        healthModule.OnHealthZero += Die;
     }
 
     protected virtual void Update()
@@ -20,5 +21,11 @@ public class Enemy : Character
         Rotate(playerTargetTransform.position);
 
         Move();
+    }
+
+    private void Die()
+    {
+        FindAnyObjectByType<GameManager>().EnemyKilled(this);
+        Destroy(gameObject);
     }
 }
