@@ -1277,6 +1277,7 @@ MonoBehaviour:
   - {fileID: 777832847921702945, guid: b7bed34dac0106242b9dac49d9c00041, type: 3}
   - {fileID: 3758870089361330066, guid: ac6b260679ba6a948a9be1997ce8149c, type: 3}
   - {fileID: 6692861440524404034, guid: 7b80eec3cb2c4934c95e2770c4aebecb, type: 3}
+  - {fileID: 2159453147059951910, guid: b2acebf48929e0a4da6a0d2d9b0b6595, type: 3}
   possibleSpawnPoints:
   - {fileID: 1711628039}
   - {fileID: 1280448898}
@@ -1285,6 +1286,8 @@ MonoBehaviour:
   - {fileID: 1219254832}
   enemiesParent: {fileID: 479490619}
   currentScore: 0
+  pickupsToSpawn: []
+  chanceToSpawnPickup: 0
 --- !u!4 &1571341822
 Transform:
   m_ObjectHideFlags: 0
@@ -1736,6 +1739,10 @@ PrefabInstance:
     - target: {fileID: 7310457143937174621, guid: c0b996bc895124248bd355ebe5711621, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7994524005999734811, guid: c0b996bc895124248bd355ebe5711621, type: 3}
+      propertyPath: m_LinearDamping
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8040938338807777309, guid: c0b996bc895124248bd355ebe5711621, type: 3}
       propertyPath: m_TagString

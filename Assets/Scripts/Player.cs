@@ -3,9 +3,10 @@ using UnityEngine;
 public class Player : Character, IDash
 {
     [SerializeField] private Vector2 mousePosition;
+    [SerializeField] private Weapon currentWeapon;
     [SerializeField] private Transform weaponMuzzle;
      
-    [SerializeField] private Weapon currentWeapon;
+
 
     protected override void Start()
     {

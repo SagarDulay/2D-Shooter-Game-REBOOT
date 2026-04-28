@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2399420277541631624, guid: eb5febcffb7b7c9458b8a7f990a051b2, type: 3}
+      propertyPath: bulletSpeed
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 3568182807232870684, guid: eb5febcffb7b7c9458b8a7f990a051b2, type: 3}
       propertyPath: m_Color.b
       value: 0.07060623

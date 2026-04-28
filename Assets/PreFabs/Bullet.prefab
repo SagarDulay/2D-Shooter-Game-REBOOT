@@ -203,4 +203,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
   rigidbodyModule: {fileID: 4821075852644968302}
-  bulletSpeed: 15
+  bulletSpeed: 35
+  damage: 0

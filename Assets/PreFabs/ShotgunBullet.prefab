@@ -266,9 +266,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2399420277541631624, guid: eb5febcffb7b7c9458b8a7f990a051b2, type: 3}
+      propertyPath: damage
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 2399420277541631624, guid: eb5febcffb7b7c9458b8a7f990a051b2, type: 3}
+      propertyPath: bulletSpeed
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6888383641636094354, guid: eb5febcffb7b7c9458b8a7f990a051b2, type: 3}
       propertyPath: m_Name
-      value: Shotgun
+      value: ShotgunBullet
       objectReference: {fileID: 0}
     - target: {fileID: 8638874064439532104, guid: eb5febcffb7b7c9458b8a7f990a051b2, type: 3}
       propertyPath: m_LocalPosition.x

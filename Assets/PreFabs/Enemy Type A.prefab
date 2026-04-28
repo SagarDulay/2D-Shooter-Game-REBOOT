@@ -48,6 +48,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 777832847921702945, guid: b7bed34dac0106242b9dac49d9c00041, type: 3}
+      propertyPath: moveSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 777832847921702945, guid: b7bed34dac0106242b9dac49d9c00041, type: 3}
+      propertyPath: distanceToAttack
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3928045532088159058, guid: b7bed34dac0106242b9dac49d9c00041, type: 3}
       propertyPath: m_Color.b
       value: 0
@@ -62,7 +70,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7301651254439897555, guid: b7bed34dac0106242b9dac49d9c00041, type: 3}
       propertyPath: m_Name
-      value: Enemy (1) Variant
+      value: Enemy Type A
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
