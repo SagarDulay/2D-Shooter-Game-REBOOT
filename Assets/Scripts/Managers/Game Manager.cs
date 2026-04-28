@@ -6,21 +6,29 @@ using Unity.VisualScripting;
 public class GameManager : MonoBehaviour
 
 {
-
+    [Header("Spawning Enemies")]
     [SerializeField] private List<Enemy> allSpawnedEnemies;
-
     [SerializeField] private Enemy[] possibleEnemyPrefabs;
     [SerializeField] private Transform[] possibleSpawnPoints;
-
     [SerializeField] private Transform enemiesParent;
 
+    [Space(10)] 
+
+    [Header("Score")]
     [SerializeField] private int currentScore;
+
+    [Space(10)]
+
+    [Header("Pick Ups")]
+    [SerializeField] private PickUp[] pickupsToSpawn;
+    [SerializeField] private float chanceToSpawnPickup;
 
     void Start()
     {
         StartCoroutine( SpawnRandomEnemy() );
    
     }
+
     private IEnumerator SpawnRandomEnemy()
     {
         while(true) 
@@ -56,7 +64,11 @@ public class GameManager : MonoBehaviour
     {
         allSpawnedEnemies.Remove(deadEnemy);
         currentScore += 10;
-        
+
+        if (Random.Range(0, 100) < chanceToSpawnPickup)
+        {
+            SpawnRandomPickup(deadEnemy.transform.position);
+        }
     }
 
     public int GetCurrentScore()
@@ -71,5 +83,12 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.SetInt("HighestScore", currentScore);
         }
         
+    }
+
+    private void SpawnRandomPickup(Vector2 positionToSpawn)
+    {
+        int randomIndex = Random.Range(0, pickupsToSpawn.Length);
+        PickUp randomPickup = pickupsToSpawn[randomIndex];
+        Instantiate(randomPickup, positionToSpawn, Quaternion.identity);
     }
 }

@@ -25,7 +25,11 @@ public abstract class Character : MonoBehaviour
 
     public void Rotate(Vector3 rotationTarget)
     {
-        transform.up = rotationTarget - transform.position;
+        Vector3 destinationRotation = rotationTarget - transform.position;
+
+        transform.up = Vector3.Lerp(transform.up, destinationRotation, Time.deltaTime * 5f);
+
+
     }
     
     public virtual void Attack()

@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 122ab3c076449224eba0622778ff4a62, type: 3}
-  m_Name: Rocket
+  m_Name: Shotgun
   m_EditorClassIdentifier: Assembly-CSharp::RangedWeapon
-  damage: 100
-  projectilePrefab: {fileID: 1175136621352160097, guid: fba05f22d48d8de4ebdd55736a4b2568, type: 3}
-  fireRate: 50
+  damage: 45
+  projectilePrefab: {fileID: 6721344021526414887, guid: 352a3146820bd6242a2d0b47eb8d615c, type: 3}
+  fireRate: 8
