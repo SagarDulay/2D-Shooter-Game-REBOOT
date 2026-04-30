@@ -4,10 +4,9 @@ using UnityEngine;
 public class ShootingEnemy : Enemy
 {
 
-    [SerializeField] private Weapon currentWeapon;
-    [SerializeField] private Transform weaponMuzzle;
-    [SerializeField] 
-    private bool canShoot;
+    [SerializeField] protected Weapon currentWeapon;
+    [SerializeField] protected Transform weaponMuzzle;
+    public bool canShoot;
 
 
 

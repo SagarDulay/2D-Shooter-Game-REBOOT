@@ -76,8 +76,39 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Type B
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 777832847921702945, guid: b7bed34dac0106242b9dac49d9c00041, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7301651254439897555, guid: b7bed34dac0106242b9dac49d9c00041, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6571779901119660681}
   m_SourcePrefab: {fileID: 100100000, guid: b7bed34dac0106242b9dac49d9c00041, type: 3}
+--- !u!1 &3710427327842337968 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7301651254439897555, guid: b7bed34dac0106242b9dac49d9c00041, type: 3}
+  m_PrefabInstance: {fileID: 6208978307260427619}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6571779901119660681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3710427327842337968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d596f229e6c54245ab669d3537bd956, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ExplosiveEnemy
+  moveSpeed: 100
+  rigidbodyModule: {fileID: 4443779024922027157}
+  distanceToAttack: 0
+  dieEffectPrefab: {fileID: 2433282508537954060, guid: 3ef3ae421f71c5c4e97fe12dc2fc6312, type: 3}
+  explosionDamage: 70
+--- !u!50 &4443779024922027157 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 7746685748846397942, guid: b7bed34dac0106242b9dac49d9c00041, type: 3}
+  m_PrefabInstance: {fileID: 6208978307260427619}
+  m_PrefabAsset: {fileID: 0}

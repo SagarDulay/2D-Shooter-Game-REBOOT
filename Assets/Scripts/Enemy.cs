@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Enemy : Character
 {
-    private Player playerTargetTransform;
-    [SerializeField] private float distanceToAttack;
+    protected Player playerTargetTransform;
+    [SerializeField] protected float distanceToAttack;
     [SerializeField] private GameObject dieEffectPrefab;
 
 
@@ -43,7 +43,7 @@ public class Enemy : Character
 
         playerTargetTransform.healthModule.DecreaseHealth(Time.deltaTime);
     }
-    private void Die()
+    protected void Die()
     {
         FindAnyObjectByType<GameManager>().EnemyKilled(this);
         Instantiate(dieEffectPrefab, transform.position, Quaternion.identity);

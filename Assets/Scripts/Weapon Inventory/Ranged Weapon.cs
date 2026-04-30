@@ -1,15 +1,14 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "New Weapon")]
+[CreateAssetMenu(menuName = "Ranged Weapon")]
 
 public class RangedWeapon : Weapon
 {
-    [SerializeField] private Bullet projectilePrefab;
-    [SerializeField] private float fireRate;
+    [SerializeField] protected Bullet projectilePrefab;
+    [SerializeField] protected float fireRate;
 
-    [SerializeField] private AudioClip shootingSound;
-
-    private AudioManager audioManagerReference;
+    [SerializeField] protected AudioClip shootingSound;
+    protected AudioManager audioManagerReference;
 
 
     public override void Use(Transform muzzle)

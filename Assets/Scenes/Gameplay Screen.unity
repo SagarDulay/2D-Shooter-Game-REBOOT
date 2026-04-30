@@ -1590,7 +1590,7 @@ RectTransform:
   m_GameObject: {fileID: 1242110609}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.2125, y: 1.9771875, z: 1}
+  m_LocalScale: {x: 1.4095312, y: 2.2737656, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1510688511}
@@ -2409,10 +2409,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   allSpawnedEnemies: []
   possibleEnemyPrefabs:
-  - {fileID: 777832847921702945, guid: b7bed34dac0106242b9dac49d9c00041, type: 3}
-  - {fileID: 3758870089361330066, guid: ac6b260679ba6a948a9be1997ce8149c, type: 3}
-  - {fileID: 6692861440524404034, guid: 7b80eec3cb2c4934c95e2770c4aebecb, type: 3}
+  - {fileID: 8107448547852713370, guid: ac6b260679ba6a948a9be1997ce8149c, type: 3}
+  - {fileID: 559330370129297297, guid: 428020b38c8cbea4eb3e2750b7700095, type: 3}
   - {fileID: 2159453147059951910, guid: b2acebf48929e0a4da6a0d2d9b0b6595, type: 3}
+  - {fileID: 2760045994542052745, guid: 35cc726f4080d2447afea5a56f14b2f8, type: 3}
   possibleSpawnPoints:
   - {fileID: 1711628039}
   - {fileID: 1280448898}
