@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RangedWeapon
   damage: 25
   projectilePrefab: {fileID: 1491203270112522622, guid: 4b0b7f36c41bfda44bd7ec2c2a5f720d, type: 3}
-  fireRate: 8
+  fireRate: 0.3
+  shootingSound: {fileID: 0}

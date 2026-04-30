@@ -4,8 +4,7 @@ public class Enemy : Character
 {
     private Player playerTargetTransform;
     [SerializeField] private float distanceToAttack;
-
-
+    [SerializeField] private GameObject dieEffectPrefab;
 
 
     protected override void Start()
@@ -47,6 +46,7 @@ public class Enemy : Character
     private void Die()
     {
         FindAnyObjectByType<GameManager>().EnemyKilled(this);
+        Instantiate(dieEffectPrefab, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }

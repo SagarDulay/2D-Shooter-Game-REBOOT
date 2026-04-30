@@ -12,6 +12,26 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1328412083391550787, guid: dcca9d149723c66498f4909315d82e70, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7275878305617495303, guid: 2de37033381747440937ff8c7496b4db, type: 3}
+    - target: {fileID: 3173305689510976750, guid: dcca9d149723c66498f4909315d82e70, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3173305689510976750, guid: dcca9d149723c66498f4909315d82e70, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3173305689510976750, guid: dcca9d149723c66498f4909315d82e70, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3173305689510976750, guid: dcca9d149723c66498f4909315d82e70, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3281106256610806853, guid: dcca9d149723c66498f4909315d82e70, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -72,7 +92,7 @@ PrefabInstance:
       addedObject: {fileID: 2822054459738878600}
     - targetCorrespondingSourceObject: {fileID: 3899813870226352639, guid: dcca9d149723c66498f4909315d82e70, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7439657824070811214}
+      addedObject: {fileID: 5790074650681668589}
   m_SourcePrefab: {fileID: 100100000, guid: dcca9d149723c66498f4909315d82e70, type: 3}
 --- !u!1 &8610627578994884118 stripped
 GameObject:
@@ -91,9 +111,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8416d73b8d1c6eb44bc884123917a49f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthPickUp
-  amountOfHealth: 0
---- !u!58 &7439657824070811214
-CircleCollider2D:
+  amountOfHealth: 15
+--- !u!61 &5790074650681668589
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -109,7 +129,7 @@ CircleCollider2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_LayerOverridePriority: 0
+  m_LayerOverridePriority: -1
   m_ForceSendLayers:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -126,5 +146,15 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -3.29, y: 1.81}
-  m_Radius: 0.28
+  m_Offset: {x: -0.0036282241, y: -0.0036281943}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.35418648, y: 0.3541866}
+  m_EdgeRadius: 0

@@ -10,11 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 245855267981818648, guid: b7bed34dac0106242b9dac49d9c00041, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.016003
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 245855267981818648, guid: b7bed34dac0106242b9dac49d9c00041, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1712904
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 245855267981818648, guid: b7bed34dac0106242b9dac49d9c00041, type: 3}
       propertyPath: m_LocalPosition.z
@@ -56,17 +56,29 @@ PrefabInstance:
       propertyPath: distanceToAttack
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1733110042972809919, guid: b7bed34dac0106242b9dac49d9c00041, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 3928045532088159058, guid: b7bed34dac0106242b9dac49d9c00041, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -590947418329346848, guid: 3584f3a1f0d2c574190319abbe8d53e2, type: 3}
+    - target: {fileID: 3928045532088159058, guid: b7bed34dac0106242b9dac49d9c00041, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3928045532088159058, guid: b7bed34dac0106242b9dac49d9c00041, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3928045532088159058, guid: b7bed34dac0106242b9dac49d9c00041, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3928045532088159058, guid: b7bed34dac0106242b9dac49d9c00041, type: 3}
       propertyPath: m_Color.r
-      value: 0.38679248
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7301651254439897555, guid: b7bed34dac0106242b9dac49d9c00041, type: 3}
       propertyPath: m_Name

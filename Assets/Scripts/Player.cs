@@ -5,6 +5,8 @@ public class Player : Character, IDash
     [SerializeField] private Vector2 mousePosition;
     [SerializeField] private Weapon currentWeapon;
     [SerializeField] private Transform weaponMuzzle;
+
+    [SerializeField] private float shootCountdown;
      
 
 
@@ -22,6 +24,7 @@ public class Player : Character, IDash
     }
     void Update()
     {
+
         movementDirection.x = Input.GetAxisRaw("Horizontal");
         movementDirection.y = Input.GetAxisRaw("Vertical");
 
@@ -31,21 +34,40 @@ public class Player : Character, IDash
 
         Move();
 
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
 
             Dash();
         }
 
-        if(Input.GetMouseButtonDown(0))
+        shootCountdown -= Time.deltaTime;
+
+        if (shootCountdown <= 0f)
         {
-            Attack();
+
+            if (Input.GetMouseButton(0))
+            {
+                Attack();
+            }
+
         }
     }
 
     public override void Attack()
     {
+
         base.Attack();
+
+        if(currentWeapon is RangedWeapon currentRangedWeapon)
+        {
+            shootCountdown = currentRangedWeapon.GetFireRate();
+        }
+
+        else
+        {
+            shootCountdown = 1;
+        }
+
         currentWeapon.Use(weaponMuzzle);
     }
     public void Dash()
