@@ -15,4 +15,4 @@ MonoBehaviour:
   damage: 15
   projectilePrefab: {fileID: 2399420277541631624, guid: eb5febcffb7b7c9458b8a7f990a051b2, type: 3}
   fireRate: 0.6
-  shootingSound: {fileID: 0}
+  shootingSound: {fileID: 8300000, guid: e16613ba2b29fbf4e84ee2ac4d928a8e, type: 3}

@@ -4,7 +4,7 @@ public class AudioManager : MonoBehaviour
 {
     [SerializeField] private AudioSource shootingSource;
     [SerializeField] private AudioSource powerUpSource;
-    [SerializeField] private AudioSource musicSourse;
+    [SerializeField] private AudioSource musicSource;
 
 
     public void PlayShootingSound(AudioClip shootSound)

@@ -62,7 +62,6 @@ public class Player : Character, IDash
         {
             shootCountdown = currentRangedWeapon.GetFireRate();
         }
-
         else
         {
             shootCountdown = 1;
