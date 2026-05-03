@@ -1,6 +1,10 @@
 using UnityEngine;
 
 public class Enemy : Character
+
+
+
+
 {
     protected Player playerTargetTransform;
     [SerializeField] protected float distanceToAttack;

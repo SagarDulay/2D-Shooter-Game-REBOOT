@@ -18,9 +18,9 @@ public class BurstWeapon : RangedWeapon
         if (audioManagerReference == null)       
             audioManagerReference = FindAnyObjectByType<AudioManager>();
 
-            muzzle.GetComponent<MonoBehaviour>().StartCoroutine(ShootBurst(muzzle));
+        MonoBehaviour runner = muzzle.GetComponentInParent<MonoBehaviour>();
+        runner.StartCoroutine(ShootBurst(muzzle));
 
-        
     }
 
 

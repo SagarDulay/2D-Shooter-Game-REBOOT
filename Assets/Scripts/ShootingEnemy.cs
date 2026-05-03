@@ -2,6 +2,9 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 public class ShootingEnemy : Enemy
+
+
+
 {
 
     [SerializeField] protected Weapon currentWeapon;

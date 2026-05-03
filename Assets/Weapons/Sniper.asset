@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 122ab3c076449224eba0622778ff4a62, type: 3}
+  m_Script: {fileID: 11500000, guid: 5680267f8af63924c95348bbbc982d95, type: 3}
   m_Name: Sniper
-  m_EditorClassIdentifier: Assembly-CSharp::RangedWeapon
-  damage: 100
-  projectilePrefab: {fileID: 1175136621352160097, guid: fba05f22d48d8de4ebdd55736a4b2568, type: 3}
-  fireRate: 1
-  shootingSound: {fileID: 8300000, guid: 5e1a9f876d3dafd47bc6b3dde25135fa, type: 3}
+  m_EditorClassIdentifier: Assembly-CSharp::SniperWeapon
+  damage: 75
+  projectilePrefab: {fileID: 7701633655606373852, guid: 731a2b6d7ad77314d9176373d0faad8c, type: 3}
+  fireRate: 3
+  shootingSound: {fileID: 8300000, guid: 8401456349c492a489ed90469e317e43, type: 3}

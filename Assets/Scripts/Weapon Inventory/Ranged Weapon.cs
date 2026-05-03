@@ -25,7 +25,7 @@ public class RangedWeapon : Weapon
         audioManagerReference.PlayShootingSound(shootingSound);
     }
 
-    public float GetFireRate()
+    public virtual float GetFireRate()
     {
         return fireRate;
     }

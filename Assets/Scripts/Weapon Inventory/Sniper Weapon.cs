@@ -1,16 +1,22 @@
 using UnityEngine;
 
-public class SniperWeapon : MonoBehaviour
+[CreateAssetMenu(menuName = "Sniper Weapon")]
+public class SniperWeapon : RangedWeapon
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    public override void Use(Transform muzzle)
     {
-        
+        if (audioManagerReference == null)
+            audioManagerReference = FindAnyObjectByType<AudioManager>();
+
+        Bullet clonedProjectile = GameObject.Instantiate(projectilePrefab, muzzle.position, muzzle.rotation);
+        clonedProjectile.damage = damage;
+
+        audioManagerReference.PlayShootingSound(shootingSound);
     }
 
-    // Update is called once per frame
-    void Update()
+    public override float GetFireRate()
     {
-        
+        return fireRate;
     }
 }

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ab2666567886ea49949c7fa40f58e17, type: 3}
-  m_Name: New Burst Weapon
+  m_Name: Burst X 5 bullets
   m_EditorClassIdentifier: Assembly-CSharp::BurstWeapon
   damage: 10
   projectilePrefab: {fileID: 1175136621352160097, guid: fba05f22d48d8de4ebdd55736a4b2568, type: 3}
