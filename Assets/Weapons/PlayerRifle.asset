@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 122ab3c076449224eba0622778ff4a62, type: 3}
-  m_Name: Rifle
+  m_Name: PlayerRifle
   m_EditorClassIdentifier: Assembly-CSharp::RangedWeapon
   damage: 25
   projectilePrefab: {fileID: 1491203270112522622, guid: 4b0b7f36c41bfda44bd7ec2c2a5f720d, type: 3}
-  fireRate: 0.3
+  fireRate: 0.2
   shootingSound: {fileID: 8300000, guid: d9419ba0bfac1e84a95418ac5851caf6, type: 3}

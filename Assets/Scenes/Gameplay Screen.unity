@@ -775,9 +775,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d2addecafb35b54f8fb92e9e2d7b89e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UICanvas
+  gameplayScreen: {fileID: 1510688510}
   healthTextValue: {fileID: 1130547534}
   scoreTextValue: {fileID: 1073049030}
   highScoreTextValue: {fileID: 1866970027}
+  gameOverScreen: {fileID: 1488937139}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0

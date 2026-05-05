@@ -342,7 +342,7 @@ MonoBehaviour:
   moveSpeed: 45
   rigidbodyModule: {fileID: 840253514168153464}
   distanceToAttack: 9
-  dieEffectPrefab: {fileID: 4425129568585013132, guid: bbeeb0ddc21369746aaaae5c5c1c09cf, type: 3}
+  dieEffectPrefab: {fileID: 141433446842962269, guid: 9fe8f8b3288e45a44af36ff8aa04486e, type: 3}
   currentWeapon: {fileID: 11400000, guid: e8389b8c8d99d0b4f92dd677b7346449, type: 2}
   weaponMuzzle: {fileID: 6055851304660203371}
   canShoot: 0
