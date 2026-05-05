@@ -2427,7 +2427,9 @@ MonoBehaviour:
   pickupsToSpawn:
   - {fileID: 2822054459738878600, guid: bdd7917778aacdd418c8a05288bfd076, type: 3}
   - {fileID: 4867956760035559595, guid: 5eb7871bc88ecd94c9b0bb67fbddc023, type: 3}
-  chanceToSpawnPickup: 25
+  weaponPickupSpawn:
+  - {fileID: 6933732795924949045, guid: 0353ae8dfb8b2754fbc91ea17495ec4b, type: 3}
+  - {fileID: 3064845982638935185, guid: b5e568cd9e1f33e47ac9915f8cf7741c, type: 3}
 --- !u!4 &1571341822
 Transform:
   m_ObjectHideFlags: 0
