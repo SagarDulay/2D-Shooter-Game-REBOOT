@@ -89,4 +89,14 @@ public class Player : Character, IDash
         currentWeapon = newWeapon;
         weaponTimer = weaponPickupDuration;
     }
+
+    public float GetWeaponTimer()
+    {
+        return weaponTimer;
+    }
+
+    public string GetCurrentWeaponName()
+    {
+        return currentWeapon.name;
+    }
 }

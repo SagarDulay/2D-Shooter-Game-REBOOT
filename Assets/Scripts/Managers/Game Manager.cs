@@ -16,31 +16,15 @@ public class GameManager : MonoBehaviour
 
     [Header("Score")]
     [SerializeField] private int currentScore;
-
-    [Space(10)]
-
-    [Header("Pick Ups")]
-    [SerializeField] private PickUp[] pickupsToSpawn;
-    
-
-    [Space(10)]
-
-    [Header("Weapon Drops")]
-    [SerializeField] private PickUp[] weaponPickupSpawn;
-   
+    [SerializeField] private PickupSpawner pickupSpawner;
 
 
 
-    private int killCount;
-    private int killsForWeaponDrop;
-    private int killsForHealthDrop;
 
     void Start()
     {
         StartCoroutine( SpawnRandomEnemy() );
-        killsForWeaponDrop = Random.Range(15, 26);
-        killsForHealthDrop = Random.Range(10, 16);
-
+   
     }
 
     private IEnumerator SpawnRandomEnemy()
@@ -73,20 +57,7 @@ public class GameManager : MonoBehaviour
     {
         allSpawnedEnemies.Remove(deadEnemy);
         currentScore += 10;
-        killCount++;
-
-        if (killCount >= killsForWeaponDrop)
-        {
-            int randomIndex = Random.Range(0, weaponPickupSpawn.Length);
-            Instantiate(weaponPickupSpawn[randomIndex], deadEnemy.transform.position, Quaternion.identity);
-            killsForWeaponDrop = killCount + Random.Range(15, 26);
-        }
-
-        if (killCount >= killsForHealthDrop)
-        {
-            SpawnRandomPickup(deadEnemy.transform.position);
-            killsForHealthDrop = killCount + Random.Range(10, 16);
-        }
+        pickupSpawner.OnEnemyKilled(deadEnemy.transform.position);
     }
 
     public int GetCurrentScore()
@@ -103,10 +74,4 @@ public class GameManager : MonoBehaviour
         
     }
 
-    private void SpawnRandomPickup(Vector2 positionToSpawn)
-    {
-        int randomIndex = Random.Range(0, pickupsToSpawn.Length);
-        PickUp randomPickup = pickupsToSpawn[randomIndex];
-        Instantiate(randomPickup, positionToSpawn, Quaternion.identity);
-    }
 }
