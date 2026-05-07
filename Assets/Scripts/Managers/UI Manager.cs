@@ -15,7 +15,9 @@ public class UIManager : MonoBehaviour
 
     [Header("Game Over")]
     [SerializeField] private GameObject gameOverScreen;
-    
+    [SerializeField] private TextMeshProUGUI finalScoreValue;
+    [SerializeField] private TextMeshProUGUI highScoreGameOverValue;
+
     private Player localPlayer;
     private GameManager localGameManager;
     void Start()
@@ -49,6 +51,8 @@ public class UIManager : MonoBehaviour
 
     public void ShowGameOver()
     {
+        finalScoreValue.text = "Final Score: " + localGameManager.GetCurrentScore().ToString();
+        highScoreGameOverValue.text = "High Score: " + PlayerPrefs.GetInt("HighestScore").ToString();
         gameplayScreen.SetActive(false);
         gameOverScreen.SetActive(true);
     }

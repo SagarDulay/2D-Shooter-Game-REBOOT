@@ -14,6 +14,7 @@ public class Health
     public void IncreaseHealth(float ToIncrease)
     {
         healthPoints += ToIncrease;
+        healthPoints = Mathf.Min(healthPoints + ToIncrease, 100f);
     }
 
     public void DecreaseHealth(float ToDecrease)

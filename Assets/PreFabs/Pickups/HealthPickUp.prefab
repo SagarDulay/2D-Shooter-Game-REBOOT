@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8416d73b8d1c6eb44bc884123917a49f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthPickUp
-  amountOfHealth: 15
+  amountOfHealth: 25
 --- !u!61 &5790074650681668589
 BoxCollider2D:
   m_ObjectHideFlags: 0

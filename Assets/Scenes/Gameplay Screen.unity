@@ -518,7 +518,7 @@ RectTransform:
   m_GameObject: {fileID: 375893155}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.82499, y: 1.4, z: 1}
+  m_LocalScale: {x: 0.9178013, y: 1.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1488937140}
@@ -575,8 +575,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26.8
-  m_fontSizeBase: 26.8
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -919,6 +919,8 @@ MonoBehaviour:
   weaponTypeText: {fileID: 1704131148}
   weaponTimerValue: {fileID: 323421504}
   gameOverScreen: {fileID: 1488937139}
+  finalScoreValue: {fileID: 1884050585}
+  highScoreGameOverValue: {fileID: 375893157}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1790,7 +1792,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.000015259, y: -57.251}
+  m_AnchoredPosition: {x: 0, y: -57.251}
   m_SizeDelta: {x: 177.1248, y: 40.9316}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1242110611
@@ -1840,8 +1842,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 20.82
+  m_fontSizeBase: 20.82
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2604,10 +2606,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   allSpawnedEnemies: []
   possibleEnemyPrefabs:
+  - {fileID: 8107448547852713370, guid: ac6b260679ba6a948a9be1997ce8149c, type: 3}
   - {fileID: 6571779901119660681, guid: 7b80eec3cb2c4934c95e2770c4aebecb, type: 3}
-  - {fileID: 559330370129297297, guid: 428020b38c8cbea4eb3e2750b7700095, type: 3}
   - {fileID: 2159453147059951910, guid: b2acebf48929e0a4da6a0d2d9b0b6595, type: 3}
   - {fileID: 2760045994542052745, guid: 35cc726f4080d2447afea5a56f14b2f8, type: 3}
+  - {fileID: 559330370129297297, guid: 428020b38c8cbea4eb3e2750b7700095, type: 3}
   - {fileID: 1163552942306289531, guid: 54e88919e4cddd2459aa8a7f65a76ced, type: 3}
   possibleSpawnPoints:
   - {fileID: 1711628039}
@@ -2790,7 +2793,7 @@ RectTransform:
   m_GameObject: {fileID: 1642907562}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.3280555, y: 2.7254539, z: 0.8851}
+  m_LocalScale: {x: 1.9125111, y: 2.7254539, z: 0.8851}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1488937140}
@@ -2847,8 +2850,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50.4
-  m_fontSizeBase: 50.4
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3353,7 +3356,7 @@ RectTransform:
   m_GameObject: {fileID: 1884050583}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.82499, y: 1.4, z: 1}
+  m_LocalScale: {x: 1.2788994, y: 1.4875, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1488937140}
@@ -3410,8 +3413,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
