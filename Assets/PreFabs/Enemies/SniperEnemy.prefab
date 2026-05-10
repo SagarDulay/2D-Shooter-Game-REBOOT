@@ -339,12 +339,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07db9e7d0f9df4e4984924cb6e47af3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SniperEnemy
-  moveSpeed: 45
+  moveSpeed: 50
   rigidbodyModule: {fileID: 840253514168153464}
-  distanceToAttack: 9
+  distanceToAttack: 7
   dieEffectPrefab: {fileID: 141433446842962269, guid: 9fe8f8b3288e45a44af36ff8aa04486e, type: 3}
+  startingHealth: 75
+  tokenPrefab: {fileID: 3585358242906766169, guid: 4eb0fa9c6385e1f4a9234d01686a7d7e, type: 3}
   currentWeapon: {fileID: 11400000, guid: e8389b8c8d99d0b4f92dd677b7346449, type: 2}
   weaponMuzzle: {fileID: 6055851304660203371}
   canShoot: 0
-  spotRange: 9
-  shootingRange: 8
+  spotRange: 7
+  shootingRange: 7

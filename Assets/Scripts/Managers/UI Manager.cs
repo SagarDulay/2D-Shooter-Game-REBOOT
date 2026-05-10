@@ -31,20 +31,19 @@ public class UIManager : MonoBehaviour
     void Update()
     {
         healthTextValue.text = "Health:" + localPlayer.healthModule.GetHealthPoints().ToString("F0") + "%";
-        scoreTextValue.text = localGameManager.GetCurrentScore().ToString();
-
-        highScoreTextValue.text = PlayerPrefs.GetInt("HighestScore").ToString();
-
         healthTextValue.color = Color.Lerp(Color.red, Color.green, localPlayer.healthModule.GetHealthPoints() / 100f);
 
-        weaponTypeText.text = "Upgrade: " + localPlayer.GetCurrentWeaponName();
+        scoreTextValue.text = localGameManager.GetCurrentScore().ToString();
+        highScoreTextValue.text = PlayerPrefs.GetInt("HighestScore").ToString();              
 
         if (localPlayer.GetWeaponTimer() > 0f)
         {
+            weaponTypeText.text = "UPGRADE: " + localPlayer.GetCurrentWeaponName();
             weaponTimerValue.text = localPlayer.GetWeaponTimer().ToString("F1") + "s";
         }
         else
         {
+            weaponTypeText.text = "";
             weaponTimerValue.text = "";
         }
     }

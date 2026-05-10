@@ -131,4 +131,5 @@ MonoBehaviour:
   rigidbodyModule: {fileID: 6152087592141319749}
   distanceToAttack: 0
   dieEffectPrefab: {fileID: 4425129568585013132, guid: bbeeb0ddc21369746aaaae5c5c1c09cf, type: 3}
-  explosionDamage: 75
+  startingHealth: 50
+  explosionDamage: 50

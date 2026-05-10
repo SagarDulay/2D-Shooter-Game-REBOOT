@@ -18,8 +18,8 @@ public class PickupSpawner : MonoBehaviour
 
     void Start()
     {
-        killsForWeaponDrop = Random.Range(15, 26);
-        killsForHealthDrop = Random.Range(10, 16);
+        killsForWeaponDrop = Random.Range(10, 23);
+        killsForHealthDrop = Random.Range(7, 16);
     }
 
     public void OnEnemyKilled(Vector2 position)
@@ -29,7 +29,7 @@ public class PickupSpawner : MonoBehaviour
         if (killCount >= killsForWeaponDrop)
         {
             int randomIndex = Random.Range(0, weaponPickUp.Length);
-            PickUp spawnedWeapon = Instantiate(weaponPickUp[randomIndex], position, Quaternion.identity);
+            PickUp spawnedWeapon = Instantiate(weaponPickUp[randomIndex], GetRandomScreenPosition(), Quaternion.identity);
             Destroy(spawnedWeapon.gameObject, weaponPickupLifetime);
             killsForWeaponDrop = killCount + Random.Range(15, 26);
         }
@@ -37,9 +37,21 @@ public class PickupSpawner : MonoBehaviour
         if (killCount >= killsForHealthDrop)
         {
             int randomIndex = Random.Range(0, pickupsToSpawn.Length);
-            PickUp spawnedHealth = Instantiate(pickupsToSpawn[randomIndex], position, Quaternion.identity);
+            PickUp spawnedHealth = Instantiate(pickupsToSpawn[randomIndex], GetRandomScreenPosition(), Quaternion.identity);
             Destroy(spawnedHealth.gameObject, healthPickupLifetime);
             killsForHealthDrop = killCount + Random.Range(10, 16);
         }
+    }
+
+    private Vector2 GetRandomScreenPosition()
+    {
+        Camera cam = Camera.main;
+        float camHeight = cam.orthographicSize;
+        float camWidth = cam.orthographicSize * cam.aspect;
+
+        float randomX = Random.Range(-camWidth, camWidth);
+        float randomY = Random.Range(-camHeight, camHeight);
+
+        return new Vector2 (randomX, randomY);
     }
 }

@@ -388,8 +388,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 328.75, y: -201.33}
-  m_SizeDelta: {x: 372.03967, y: 125.45599}
+  m_AnchoredPosition: {x: 328.75, y: -208}
+  m_SizeDelta: {x: 372.0397, y: 73.0102}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &323421504
 MonoBehaviour:
@@ -420,8 +420,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278212864
+  m_fontColor: {r: 0, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -438,8 +438,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 34.82
+  m_fontSizeBase: 34.82
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1433,11 +1433,11 @@ MonoBehaviour:
   pickupsToSpawn:
   - {fileID: 4867956760035559595, guid: 5eb7871bc88ecd94c9b0bb67fbddc023, type: 3}
   - {fileID: 2822054459738878600, guid: bdd7917778aacdd418c8a05288bfd076, type: 3}
-  healthPickupLifetime: 5
+  healthPickupLifetime: 8
   weaponPickUp:
   - {fileID: 6933732795924949045, guid: 0353ae8dfb8b2754fbc91ea17495ec4b, type: 3}
   - {fileID: 3064845982638935185, guid: b5e568cd9e1f33e47ac9915f8cf7741c, type: 3}
-  weaponPickupLifetime: 8
+  weaponPickupLifetime: 6
 --- !u!4 &1006885064
 Transform:
   m_ObjectHideFlags: 0
@@ -3058,8 +3058,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 337.7599, y: -72.528015}
-  m_SizeDelta: {x: 354.0172, y: 71.486}
+  m_AnchoredPosition: {x: 369.40826, y: -86.09161}
+  m_SizeDelta: {x: 388.2576, y: 86.1605}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1704131148
 MonoBehaviour:
@@ -3090,8 +3090,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278255360
+  m_fontColor: {r: 0, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3108,8 +3108,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16
-  m_fontSizeBase: 16
+  m_fontSize: 17.63
+  m_fontSizeBase: 17.63
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3118,7 +3118,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 5
   m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -3831,8 +3831,8 @@ SceneRoots:
   - {fileID: 1571341822}
   - {fileID: 479490619}
   - {fileID: 560491209}
-  - {fileID: 1323125788}
   - {fileID: 1581052346}
   - {fileID: 996880147}
   - {fileID: 630846991}
   - {fileID: 1006885064}
+  - {fileID: 1323125788}

@@ -1,19 +1,21 @@
 using UnityEngine;
 
 public class Enemy : Character
-
-
-
-
 {
     protected Player playerTargetTransform;
     [SerializeField] protected float distanceToAttack;
     [SerializeField] private GameObject dieEffectPrefab;
 
+    [SerializeField] private float startingHealth = 100f;
+
+    [SerializeField] protected GameObject tokenPrefab;
+    
+
 
     protected override void Start()
     {
         base.Start();
+        healthModule = new Health(startingHealth);
         playerTargetTransform = FindAnyObjectByType<Player>();
         healthModule.OnHealthZero += Die;
     }
@@ -49,6 +51,12 @@ public class Enemy : Character
     }
     protected void Die()
     {
+        if (tokenPrefab != null)
+        {
+            GameObject token = Instantiate (tokenPrefab, transform.position, Quaternion.identity);
+            Destroy(token, 7f);
+        }
+
         FindAnyObjectByType<GameManager>().EnemyKilled(this);
         Instantiate(dieEffectPrefab, transform.position, Quaternion.identity);
         Destroy(gameObject);

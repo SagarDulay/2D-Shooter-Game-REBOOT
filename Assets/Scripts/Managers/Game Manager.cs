@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     [Header("Score")]
     [SerializeField] private int currentScore;
     [SerializeField] private PickupSpawner pickupSpawner;
+    private float scoreTimer;
+    private int pointsPerKill = 10;
 
 
 
@@ -25,6 +27,17 @@ public class GameManager : MonoBehaviour
     {
         StartCoroutine( SpawnRandomEnemy() );
    
+    }
+
+    private void Update()
+    {
+        scoreTimer += Time.deltaTime;
+
+        if (scoreTimer >= 20f)
+        {
+            pointsPerKill += 10;
+            scoreTimer = 0f;
+        }
     }
 
     private IEnumerator SpawnRandomEnemy()
@@ -56,7 +69,7 @@ public class GameManager : MonoBehaviour
     public void EnemyKilled(Enemy deadEnemy)
     {
         allSpawnedEnemies.Remove(deadEnemy);
-        currentScore += 10;
+        currentScore += pointsPerKill;
         pickupSpawner.OnEnemyKilled(deadEnemy.transform.position);
     }
 
@@ -64,6 +77,12 @@ public class GameManager : MonoBehaviour
     {
         return currentScore;
     }
+
+    public void AddToScore(int amount)
+    {
+        currentScore += amount;
+    }
+
 
     public void RegisterHighScore()
     {
