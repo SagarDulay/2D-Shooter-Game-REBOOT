@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Player : Character, IDash
@@ -10,10 +11,13 @@ public class Player : Character, IDash
 
     private Weapon defaultWeapon;
     private float weaponTimer;
+    private bool invincibleOn;
+    private SpriteRenderer spriteRenderer;
 
-   protected override void Start()
+    protected override void Start()
     {
         base.Start();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         defaultWeapon = currentWeapon;
         healthModule.OnHealthZero += EndGame;
     }
@@ -99,4 +103,40 @@ public class Player : Character, IDash
     {
         return currentWeapon.name;
     }
+
+    public void ActivateInvincibility(float invincibilityDuration)
+    {
+        if (invincibleOn) return;
+        StartCoroutine(InvincibilityCorountine(invincibilityDuration));
+    }
+
+    private IEnumerator InvincibilityCorountine(float invincibilityDuration)
+    {
+        invincibleOn = true;
+        spriteRenderer.color = Color.black;
+
+        yield return new WaitForSeconds(invincibilityDuration);
+
+        invincibleOn = false;
+        spriteRenderer.color = Color.white;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) 
+    {
+        if (!invincibleOn) return;
+
+        Enemy enemy = collision.attachedRigidbody?.GetComponent<Enemy>();
+
+        if (enemy != null)
+        {
+            FindAnyObjectByType<GameManager>().EnemyKilled(enemy);
+            Destroy(enemy.gameObject);
+        }
+    }
+
+    public bool InvincibleOn()
+    {
+        return invincibleOn;
+    }
+
 }

@@ -17,10 +17,12 @@ public class GameManager : MonoBehaviour
     [Header("Score")]
     [SerializeField] private int currentScore;
     [SerializeField] private PickupSpawner pickupSpawner;
+
+
     private float scoreTimer;
     private int pointsPerKill = 10;
 
-
+    
 
 
     void Start()
@@ -69,7 +71,10 @@ public class GameManager : MonoBehaviour
     public void EnemyKilled(Enemy deadEnemy)
     {
         allSpawnedEnemies.Remove(deadEnemy);
-        currentScore += pointsPerKill;
+
+        Player player = FindAnyObjectByType<Player>();
+        currentScore += player.InvincibleOn() ? pointsPerKill * 2 : pointsPerKill;
+
         pickupSpawner.OnEnemyKilled(deadEnemy.transform.position);
     }
 
