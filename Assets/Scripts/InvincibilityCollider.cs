@@ -29,7 +29,7 @@ public class InvincibilityCollider : MonoBehaviour
 
         if (enemy != null)
         {
-            enemy.healthModule.DecreaseHealth(99999f);
+            enemy.healthModule.DecreaseHealth(Mathf.Infinity);
             return;
         }
 

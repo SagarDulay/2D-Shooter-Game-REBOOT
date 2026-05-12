@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PickupSpawner : MonoBehaviour
@@ -24,8 +25,16 @@ public class PickupSpawner : MonoBehaviour
 
     private int killsForInvincibilityDrop;
 
+    [Space(20)]
+
+    [Header("Nuke Drops")]
+    [SerializeField] private PickUp nukePickUp;
+    [SerializeField] private float nukePickUpLifetime = 8f;
+    private int killsForNuke;
+
     void Start()
     {
+        killsForNuke = Random.Range(50, 71);
         killsForInvincibilityDrop = Random.Range(20, 35);
         killsForWeaponDrop = Random.Range(10, 23);
         killsForHealthDrop = Random.Range(7, 16);
@@ -56,6 +65,13 @@ public class PickupSpawner : MonoBehaviour
             PickUp spawnedInvincibility = Instantiate(invincibilityPickUp, GetRandomScreenPosition(), Quaternion.identity);
             Destroy(spawnedInvincibility.gameObject, invincibilityPickupLifetime);
             killsForInvincibilityDrop = killCount + Random.Range(20, 35);
+        }
+
+        if (killCount >= killsForNuke)
+        {
+            PickUp dropNuke = Instantiate(nukePickUp, GetRandomScreenPosition(), Quaternion.identity);
+            Destroy(dropNuke.gameObject, nukePickUpLifetime);
+            killsForNuke = killCount + Random.Range(50, 71);
         }
     }
 

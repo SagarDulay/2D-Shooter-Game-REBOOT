@@ -78,6 +78,21 @@ public class GameManager : MonoBehaviour
         pickupSpawner.OnEnemyKilled(deadEnemy.transform.position);
     }
 
+    public void NukeAllEnemies()
+    {
+        List<Enemy> enemiesNuked = new List<Enemy>(allSpawnedEnemies);
+        
+        foreach (Enemy enemy in enemiesNuked)
+        {
+            if (enemy != null)
+            {
+                int nukeMultiplier = pointsPerKill * 2;
+                currentScore += nukeMultiplier;
+                enemy.healthModule.DecreaseHealth(Mathf.Infinity);
+            }
+        }
+    }
+
     public int GetCurrentScore()
     {
         return currentScore;
