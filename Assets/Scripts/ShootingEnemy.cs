@@ -18,6 +18,15 @@ public class ShootingEnemy : Enemy
         if (canShoot)
         {
             currentWeapon.Use(weaponMuzzle);
+
+            Bullet[] bullets = FindObjectsByType<Bullet>(FindObjectsSortMode.None);
+
+            if (bullets.Length > 0)
+            {
+                bullets[bullets.Length - 1].damage += damageIncrease;
+            }
+
+
             canShoot = false;
             Invoke("CanShootAgain", 1.5f);
             base.Attack();

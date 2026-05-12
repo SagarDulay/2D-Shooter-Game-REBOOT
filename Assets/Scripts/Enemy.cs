@@ -7,15 +7,20 @@ public class Enemy : Character
     [SerializeField] private GameObject dieEffectPrefab;
 
     [SerializeField] private float startingHealth = 100f;
-
     [SerializeField] protected GameObject tokenPrefab;
-    
 
+    protected float damageIncrease;
 
     protected override void Start()
     {
         base.Start();
-        healthModule = new Health(startingHealth);
+
+        GameManager gameManager = FindAnyObjectByType<GameManager>();
+
+        healthModule = new Health(startingHealth + gameManager.GetEnemyHealthIncrease());
+        moveSpeed += gameManager.GetEnemySpeedIncrease();
+        damageIncrease = gameManager.GetEnemyDamageIncrease();
+
         playerTargetTransform = FindAnyObjectByType<Player>();
         healthModule.OnHealthZero += Die;
     }
@@ -47,7 +52,7 @@ public class Enemy : Character
     {
         base.Attack();
 
-        playerTargetTransform.healthModule.DecreaseHealth(Time.deltaTime);
+        playerTargetTransform.healthModule.DecreaseHealth(Time.deltaTime + damageIncrease);
     }
     protected void Die()
     {

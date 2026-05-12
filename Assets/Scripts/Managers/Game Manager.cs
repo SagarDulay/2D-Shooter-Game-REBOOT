@@ -18,10 +18,15 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int currentScore;
     [SerializeField] private PickupSpawner pickupSpawner;
 
-
     private float scoreTimer;
     private int pointsPerKill = 10;
 
+    [Space(10)]
+    [Header("Difficulty Scaling")]
+    private float difficultyTimer;
+    private float enemySpeedIncrease;
+    private float enemyDamageIncrease;
+    private float enemyHealthIncrease;
     
 
 
@@ -40,6 +45,20 @@ public class GameManager : MonoBehaviour
             pointsPerKill += 10;
             scoreTimer = 0f;
         }
+
+        difficultyTimer += Time.deltaTime;
+
+        if (difficultyTimer >= 20f)
+        {
+            enemySpeedIncrease += 7f;
+            enemyDamageIncrease += 2f;
+            enemyHealthIncrease += 10f;
+            difficultyTimer = 0f;
+        }
+
+
+
+
     }
 
     private IEnumerator SpawnRandomEnemy()
@@ -112,5 +131,10 @@ public class GameManager : MonoBehaviour
         }
         
     }
+
+
+    public float GetEnemySpeedIncrease() { return enemySpeedIncrease; }
+    public float GetEnemyDamageIncrease() { return enemyDamageIncrease; }
+    public float GetEnemyHealthIncrease() { return enemyHealthIncrease; }
 
 }
