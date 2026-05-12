@@ -105,7 +105,7 @@ MonoBehaviour:
   moveSpeed: 100
   rigidbodyModule: {fileID: 4443779024922027157}
   distanceToAttack: 0
-  dieEffectPrefab: {fileID: 4425129568585013132, guid: bbeeb0ddc21369746aaaae5c5c1c09cf, type: 3}
+  dieEffectPrefab: {fileID: 2433282508537954060, guid: 3ef3ae421f71c5c4e97fe12dc2fc6312, type: 3}
   startingHealth: 60
   tokenPrefab: {fileID: 3585358242906766169, guid: e02b1256ade444448b7d5cd276fb00dc, type: 3}
   explosionDamage: 35

@@ -112,7 +112,7 @@ MonoBehaviour:
   moveSpeed: 100
   rigidbodyModule: {fileID: 5211633874213487112}
   distanceToAttack: 3
-  dieEffectPrefab: {fileID: 5112403345868107898, guid: 6f34ef0d986e9db4199cf75805f79753, type: 3}
+  dieEffectPrefab: {fileID: 2433282508537954060, guid: 3ef3ae421f71c5c4e97fe12dc2fc6312, type: 3}
   startingHealth: 60
   tokenPrefab: {fileID: 3585358242906766169, guid: e02b1256ade444448b7d5cd276fb00dc, type: 3}
   currentWeapon: {fileID: 11400000, guid: c3c7b8d5e7bddbd4a9f18bd45e362d54, type: 2}
