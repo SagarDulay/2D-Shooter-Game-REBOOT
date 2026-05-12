@@ -26,7 +26,17 @@ public class Bullet : MonoBehaviour
 
             else if (isEnemyBullet && collison.rigidbody.CompareTag("Player"))
             {
-                collison.rigidbody.GetComponent<Character>().healthModule.DecreaseHealth(damage);
+                Character character = collison.rigidbody.GetComponent<Character>();
+                Player player = character as Player;
+
+                if(player != null && player.InvincibleOn())
+                {
+                    Destroy(gameObject);
+                    return;
+                }
+
+                character.healthModule.DecreaseHealth(damage);
+
             }
 
             else if (isEnemyBullet && collison.rigidbody.CompareTag("Enemy"))

@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour
     private float enemySpeedIncrease;
     private float enemyDamageIncrease;
     private float enemyHealthIncrease;
+    private int enemyCap = 15;
+    private float spawnDelay = 2f;
     
 
 
@@ -53,6 +55,8 @@ public class GameManager : MonoBehaviour
             enemySpeedIncrease += 7f;
             enemyDamageIncrease += 2f;
             enemyHealthIncrease += 10f;
+            enemyCap = Mathf.Min(enemyCap + 1, 20);
+            spawnDelay = Mathf.Max(spawnDelay - 0.1f, 0.5f);
             difficultyTimer = 0f;
         }
 
@@ -65,7 +69,7 @@ public class GameManager : MonoBehaviour
     {
         while(true) 
         {
-            if (allSpawnedEnemies.Count < 15)
+            if (allSpawnedEnemies.Count < enemyCap)
             {
                 int amountOfIndexs = possibleEnemyPrefabs.Length;
                 int randomIndex = Random.Range(0, amountOfIndexs);
@@ -81,7 +85,7 @@ public class GameManager : MonoBehaviour
                 clonedEnemy.transform.position = randomSpawnPoint.position;
             }
 
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(spawnDelay);
 
         }
 
