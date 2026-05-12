@@ -132,4 +132,5 @@ MonoBehaviour:
   distanceToAttack: 0
   dieEffectPrefab: {fileID: 4425129568585013132, guid: bbeeb0ddc21369746aaaae5c5c1c09cf, type: 3}
   startingHealth: 50
+  tokenPrefab: {fileID: 3585358242906766169, guid: e02b1256ade444448b7d5cd276fb00dc, type: 3}
   explosionDamage: 50

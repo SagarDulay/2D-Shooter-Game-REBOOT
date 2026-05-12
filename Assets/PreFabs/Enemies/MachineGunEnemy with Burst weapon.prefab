@@ -132,7 +132,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8482469110297595777}
   - component: {fileID: 3511764219999995941}
-  - component: {fileID: 9169140188618793738}
   m_Layer: 0
   m_Name: Triangle
   m_TagString: Untagged
@@ -214,61 +213,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!60 &9169140188618793738
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1662906500872233595}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.26}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.06, y: 0.13}
-      - {x: -0.16, y: -0.02}
-      - {x: -0.16, y: -0.12}
-      - {x: -0.12, y: -0.13}
-      - {x: 0.12, y: -0.13}
-      - {x: 0.16, y: -0.11}
-      - {x: 0.16, y: -0.02}
-      - {x: 0.049999997, y: 0.13}
-  m_UseDelaunayMesh: 1
 --- !u!1 &1668820792970509277
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,6 +406,7 @@ GameObject:
   - component: {fileID: 5872173599982283201}
   - component: {fileID: 2709602651281300045}
   - component: {fileID: 2760045994542052745}
+  - component: {fileID: 9176607555585411618}
   m_Layer: 0
   m_Name: MachineGunEnemy with Burst weapon
   m_TagString: Enemy
@@ -537,3 +482,56 @@ MonoBehaviour:
   currentWeapon: {fileID: 11400000, guid: 5b70290b09e877c45980f82a02d5071c, type: 2}
   weaponMuzzle: {fileID: 829970878454181268}
   canShoot: 0
+--- !u!60 &9176607555585411618
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2566209842105980083}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.5883055}
+      - {x: -0.28911626, y: 0.20407537}
+      - {x: -0.5958577, y: -0.38117754}
+      - {x: -0.013335645, y: -0.5387186}
+      - {x: 0.59585774, y: -0.3892498}
+      - {x: 0.28911626, y: 0.16371316}
+  m_UseDelaunayMesh: 1

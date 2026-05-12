@@ -51,6 +51,7 @@ public class Enemy : Character
     }
     protected void Die()
     {
+        
         if (tokenPrefab != null)
         {
             GameObject token = Instantiate (tokenPrefab, transform.position, Quaternion.identity);

@@ -41,7 +41,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3947893041784083348}
   - component: {fileID: 4189032657846175915}
-  - component: {fileID: 8683587522926770735}
   m_Layer: 0
   m_Name: Triangle
   m_TagString: Untagged
@@ -123,56 +122,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!60 &8683587522926770735
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3710662412121036152}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.98, y: 0.75}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0, y: 0.5773587}
-      - {x: -0.5, y: -0.28866667}
-      - {x: 0.5, y: -0.28866667}
-  m_UseDelaunayMesh: 1
 --- !u!1 &3812685618707548509
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,6 +406,7 @@ GameObject:
   - component: {fileID: 5683620472780135249}
   - component: {fileID: 3139256382769410106}
   - component: {fileID: 559330370129297297}
+  - component: {fileID: 505977892557932903}
   m_Layer: 0
   m_Name: MachineGunEnemy
   m_TagString: Enemy
@@ -526,11 +476,64 @@ MonoBehaviour:
   moveSpeed: 80
   rigidbodyModule: {fileID: 3139256382769410106}
   distanceToAttack: 4
-  dieEffectPrefab: {fileID: 725748389856807714, guid: 4bda94453d2ca7444a0fff05b2d425f5, type: 3}
+  dieEffectPrefab: {fileID: 2433282508537954060, guid: 3ef3ae421f71c5c4e97fe12dc2fc6312, type: 3}
   startingHealth: 130
   tokenPrefab: {fileID: 3585358242906766169, guid: 6b6a8185c0e57474780323be2349f658, type: 3}
   currentWeapon: {fileID: 11400000, guid: 3f05e16c3b7d1ff42b0a3f65ad04ea37, type: 2}
   weaponMuzzle: {fileID: 302238790871881535}
-  canShoot: 1
-  bulletCount: 5
-  delayBetweenBullets: 0.05
+  canShoot: 0
+  bulletCount: 8
+  delayBetweenBullets: 0.03
+--- !u!60 &505977892557932903
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7000734573674467155}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.6019852}
+      - {x: -0.23606116, y: 0.20613995}
+      - {x: -0.5414905, y: -0.24319303}
+      - {x: -0.021003246, y: -0.3844546}
+      - {x: 0.53634655, y: -0.26891232}
+      - {x: 0.17947865, y: 0.24214703}
+  m_UseDelaunayMesh: 1

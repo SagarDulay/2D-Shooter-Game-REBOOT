@@ -193,6 +193,7 @@ GameObject:
   - component: {fileID: 6631074304253263122}
   - component: {fileID: 9007849220703877500}
   - component: {fileID: 3064845982638935185}
+  - component: {fileID: 6654426798776556158}
   m_Layer: 0
   m_Name: BurstWeaponPickup
   m_TagString: Untagged
@@ -266,3 +267,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeaponPickup
   weaponToGive: {fileID: 11400000, guid: ab52595db18638d4b85f2627eecdd19a, type: 2}
+--- !u!50 &6654426798776556158
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5807078278771391406}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

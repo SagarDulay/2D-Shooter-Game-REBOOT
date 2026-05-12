@@ -41,6 +41,14 @@ public class UIManager : MonoBehaviour
             weaponTypeText.text = "UPGRADE: " + localPlayer.GetCurrentWeaponName();
             weaponTimerValue.text = localPlayer.GetWeaponTimer().ToString("F1") + "s";
         }
+
+        else if (localPlayer.InvincibleOn())
+        {
+            weaponTypeText.text = "UPGRADE: INVINCIBLE";
+            weaponTimerValue.text = localPlayer.GetInvincibilityTimer().ToString("F1") + "s";
+        }
+
+
         else
         {
             weaponTypeText.text = "";

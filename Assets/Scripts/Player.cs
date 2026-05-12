@@ -12,7 +12,9 @@ public class Player : Character, IDash
     private Weapon defaultWeapon;
     private float weaponTimer;
     private bool invincibleOn;
+    private float invincibilityTimer;
     private SpriteRenderer spriteRenderer;
+    private Coroutine invincibilityCoroutine;
 
     protected override void Start()
     {
@@ -90,6 +92,7 @@ public class Player : Character, IDash
 
     public void EquipWeapon(Weapon newWeapon)
     {
+        CancelCurrentUpgrade();
         currentWeapon = newWeapon;
         weaponTimer = weaponPickupDuration;
     }
@@ -106,32 +109,25 @@ public class Player : Character, IDash
 
     public void ActivateInvincibility(float invincibilityDuration)
     {
-        if (invincibleOn) return;
-        StartCoroutine(InvincibilityCorountine(invincibilityDuration));
+        CancelCurrentUpgrade(); 
+        invincibilityCoroutine = StartCoroutine(InvincibilityCorountine(invincibilityDuration));
     }
 
     private IEnumerator InvincibilityCorountine(float invincibilityDuration)
     {
         invincibleOn = true;
+        invincibilityTimer = invincibilityDuration;
         spriteRenderer.color = Color.black;
 
-        yield return new WaitForSeconds(invincibilityDuration);
+        while (invincibilityTimer > 0f)
+        {
+            invincibilityTimer -= Time.deltaTime;
+            yield return null;
+        }
 
         invincibleOn = false;
+        invincibilityTimer = 0f;
         spriteRenderer.color = Color.white;
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision) 
-    {
-        if (!invincibleOn) return;
-
-        Enemy enemy = collision.attachedRigidbody?.GetComponent<Enemy>();
-
-        if (enemy != null)
-        {
-            FindAnyObjectByType<GameManager>().EnemyKilled(enemy);
-            Destroy(enemy.gameObject);
-        }
     }
 
     public bool InvincibleOn()
@@ -139,4 +135,25 @@ public class Player : Character, IDash
         return invincibleOn;
     }
 
+    public float GetInvincibilityTimer()
+    {
+        return invincibilityTimer;
+    }
+
+    private void CancelCurrentUpgrade()
+    {
+        if (invincibleOn) 
+        {
+            StopCoroutine(invincibilityCoroutine);
+            invincibleOn = false;
+            invincibilityTimer = 0f;
+            spriteRenderer.color = Color.white;
+        }
+
+        if (weaponTimer > 0f) 
+        {
+            weaponTimer = 0f;
+            currentWeapon = defaultWeapon;
+        }
+    }
 }

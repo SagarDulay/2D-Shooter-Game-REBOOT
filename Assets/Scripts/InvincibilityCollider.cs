@@ -1,6 +1,7 @@
 using UnityEngine;
 
 
+
 public class InvincibilityCollider : MonoBehaviour
 {
     private Player player;
@@ -12,14 +13,25 @@ public class InvincibilityCollider : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!player.InvincibleOn()) return;
+        if (!collision.gameObject.CompareTag("Enemy")) return;       
 
-        Enemy enemy = collision.attachedRigidbody?.GetComponent<Enemy>();
+        if (!player.InvincibleOn())
+        {      
+            return;
+        }
+
+        Enemy enemy = collision.GetComponent<Enemy>();
+
+        if (enemy == null)
+        {
+            enemy = collision.GetComponentInParent<Enemy>();
+        }
 
         if (enemy != null)
         {
-            FindAnyObjectByType<GameManager>().EnemyKilled(enemy);
-            Destroy(enemy.gameObject);
+            enemy.healthModule.DecreaseHealth(99999f);
+            return;
         }
+
     }
 }
