@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RAPID-FIRE
   m_EditorClassIdentifier: Assembly-CSharp::BurstWeapon
   damage: 40
-  projectilePrefab: {fileID: 1175136621352160097, guid: 66f49c65255a6f64dbda7a14212cad22, type: 3}
+  projectilePrefab: {fileID: 3704927555357515911, guid: 538f0cf5200d41d4fa903fe7cc57036a, type: 3}
   fireRate: 0.4
   shootingSound: {fileID: 8300000, guid: 4fe7bb7e96ee2f348ae05bf69bdd80fc, type: 3}
   bulletCount: 5

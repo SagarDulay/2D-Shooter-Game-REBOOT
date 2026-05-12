@@ -293,7 +293,7 @@ MonoBehaviour:
   rigidbodyModule: {fileID: 840253514168153464}
   distanceToAttack: 7
   dieEffectPrefab: {fileID: 4593184484909914552, guid: 2e1e9506f5904a64b81744324fb7cd50, type: 3}
-  startingHealth: 75
+  startingHealth: 90
   tokenPrefab: {fileID: 3585358242906766169, guid: 4eb0fa9c6385e1f4a9234d01686a7d7e, type: 3}
   currentWeapon: {fileID: 11400000, guid: e8389b8c8d99d0b4f92dd677b7346449, type: 2}
   weaponMuzzle: {fileID: 6055851304660203371}

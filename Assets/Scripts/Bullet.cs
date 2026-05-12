@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] private float bulletSpeed;
 
     public float damage;
+    public bool isEnemyBullet;
 
 
     void Start()
@@ -18,11 +19,21 @@ public class Bullet : MonoBehaviour
     {
         if(collison.rigidbody)
         {
-            if(collison.rigidbody.CompareTag("Enemy"))
+            if (!isEnemyBullet && collison.rigidbody.CompareTag("Enemy"))
             {
-                collison.rigidbody.GetComponent<Enemy>().healthModule.DecreaseHealth(damage);
+                collison.rigidbody.GetComponent<Character>().healthModule.DecreaseHealth(damage);
             }
-          
+
+            else if (isEnemyBullet && collison.rigidbody.CompareTag("Player"))
+            {
+                collison.rigidbody.GetComponent<Character>().healthModule.DecreaseHealth(damage);
+            }
+
+            else if (isEnemyBullet && collison.rigidbody.CompareTag("Enemy"))
+            {
+                return;
+            }
+
         }
 
         Destroy(gameObject);

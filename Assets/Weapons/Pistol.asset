@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 122ab3c076449224eba0622778ff4a62, type: 3}
   m_Name: Pistol
   m_EditorClassIdentifier: Assembly-CSharp::RangedWeapon
-  damage: 15
+  damage: 0.5
   projectilePrefab: {fileID: 2399420277541631624, guid: eb5febcffb7b7c9458b8a7f990a051b2, type: 3}
   fireRate: 0.6
   shootingSound: {fileID: 8300000, guid: e16613ba2b29fbf4e84ee2ac4d928a8e, type: 3}

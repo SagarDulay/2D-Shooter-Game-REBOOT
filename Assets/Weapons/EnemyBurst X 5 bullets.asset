@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ab2666567886ea49949c7fa40f58e17, type: 3}
   m_Name: EnemyBurst X 5 bullets
   m_EditorClassIdentifier: Assembly-CSharp::BurstWeapon
-  damage: 10
-  projectilePrefab: {fileID: 1175136621352160097, guid: 66f49c65255a6f64dbda7a14212cad22, type: 3}
+  damage: 1
+  projectilePrefab: {fileID: 1175136621352160097, guid: 2b77a9fbe027db445a99ef170d40869f, type: 3}
   fireRate: 0.6
   shootingSound: {fileID: 8300000, guid: 4fe7bb7e96ee2f348ae05bf69bdd80fc, type: 3}
   bulletCount: 5
