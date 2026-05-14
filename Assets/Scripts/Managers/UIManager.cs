@@ -34,7 +34,7 @@ public class UIManager : MonoBehaviour
         healthTextValue.color = Color.Lerp(Color.red, Color.green, localPlayer.healthModule.GetHealthPoints() / 100f);
 
         scoreTextValue.text = localGameManager.GetCurrentScore().ToString();
-        highScoreTextValue.text = PlayerPrefs.GetInt("HighestScore").ToString();              
+        highScoreTextValue.text = PlayerPrefs.GetInt("HighestScore").ToString();
 
         if (localPlayer.GetWeaponTimer() > 0f)
         {
