@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5680267f8af63924c95348bbbc982d95, type: 3}
   m_Name: SNIPER
   m_EditorClassIdentifier: Assembly-CSharp::SniperWeapon
-  damage: 100
+  damage: 999999
   projectilePrefab: {fileID: 2926167172292563591, guid: 02dc8639706fa2449937ed41b38f8e53, type: 3}
   fireRate: 0.5
   shootingSound: {fileID: 8300000, guid: 8401456349c492a489ed90469e317e43, type: 3}
