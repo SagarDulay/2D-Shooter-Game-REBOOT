@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2830736810922888564}
   - component: {fileID: 7348981962979791828}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: gun05_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9216855606255534717}
   - component: {fileID: 7323608856076596843}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Triangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,7 +192,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6055851304660203371}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Weapon Muzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 840253514168153464}
   - component: {fileID: 1163552942306289531}
   - component: {fileID: 6570089481764210742}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SniperEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}

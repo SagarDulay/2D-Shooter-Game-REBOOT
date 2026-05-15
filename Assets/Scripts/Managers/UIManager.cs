@@ -17,15 +17,20 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject gameOverScreen;
     [SerializeField] private TextMeshProUGUI finalScoreValue;
     [SerializeField] private TextMeshProUGUI highScoreGameOverValue;
-
     private Player localPlayer;
     private GameManager localGameManager;
+
+    [Space(10)]
+
+    [SerializeField] private GameObject pauseScreen;
+    [SerializeField] private TextMeshProUGUI pauseCurrentScoreValue;
+    [SerializeField] private TextMeshProUGUI pauseHighScoreValue;
+
+
     void Start()
     {
         localPlayer = FindAnyObjectByType<Player>();
         localGameManager = FindAnyObjectByType<GameManager>();
-
-
     }
 
     void Update()
@@ -62,5 +67,11 @@ public class UIManager : MonoBehaviour
         highScoreGameOverValue.text = "High Score: " + PlayerPrefs.GetInt("HighestScore").ToString();
         gameplayScreen.SetActive(false);
         gameOverScreen.SetActive(true);
+    }
+
+    public void UpdatePauseScreen()
+    {
+        pauseCurrentScoreValue.text = "Current Score: " + localGameManager.GetCurrentScore().ToString();
+        pauseHighScoreValue.text = "High Score: " + PlayerPrefs.GetInt("HighestScore").ToString();
     }
 }

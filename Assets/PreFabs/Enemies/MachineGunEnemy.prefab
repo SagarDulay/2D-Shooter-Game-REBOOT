@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 302238790871881535}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Weapon Muzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3947893041784083348}
   - component: {fileID: 4189032657846175915}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Triangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3265862090044714046}
   - component: {fileID: 9015026270883673982}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: gun00_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -223,7 +223,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2366513956511420923}
   - component: {fileID: 3265027596780349296}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: wingGreen_3_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -314,7 +314,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7798489120788755711}
   - component: {fileID: 3374490214795403657}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: wingGreen_3_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -407,7 +407,7 @@ GameObject:
   - component: {fileID: 3139256382769410106}
   - component: {fileID: 559330370129297297}
   - component: {fileID: 505977892557932903}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MachineGunEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}

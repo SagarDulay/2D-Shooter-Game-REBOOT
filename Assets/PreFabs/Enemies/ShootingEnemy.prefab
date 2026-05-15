@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4138184125337772156}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Weapon Muzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 5211633874213487112}
   - component: {fileID: 2159453147059951910}
   - component: {fileID: 3227443842510447416}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShootingEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -181,7 +181,7 @@ GameObject:
   m_Component:
   - component: {fileID: 665262740506744430}
   - component: {fileID: 2581207778639988645}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: gun00_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -272,7 +272,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7430540183076782412}
   - component: {fileID: 4470434809680723817}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: beamLong2_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -363,7 +363,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1374110226479313730}
   - component: {fileID: 4775330098191722814}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: beamLong2_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -454,7 +454,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3106981381444192758}
   - component: {fileID: 2646142260565973696}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Triangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

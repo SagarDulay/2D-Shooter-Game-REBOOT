@@ -14,11 +14,11 @@ public class GameFlowManager : MonoBehaviour
 
         if (isPaused)
         {
+            FindAnyObjectByType<UIManager>().UpdatePauseScreen();
             pauseScreen.SetActive(true);
             gamePlayScreen.SetActive(false);
             Time.timeScale = 0f;
         }
-
         else
         {
             pauseScreen.SetActive(false);
