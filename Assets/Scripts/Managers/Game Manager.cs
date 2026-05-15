@@ -29,7 +29,9 @@ public class GameManager : MonoBehaviour
     private float enemyHealthIncrease;
     private int enemyCap = 15;
     private float spawnDelay = 2f;
-    
+
+    private int waveLevel = 1;
+
 
 
     void Start()
@@ -57,6 +59,8 @@ public class GameManager : MonoBehaviour
             enemyHealthIncrease += 10f;
             enemyCap = Mathf.Min(enemyCap + 1, 20);
             spawnDelay = Mathf.Max(spawnDelay - 0.1f, 0.5f);
+            waveLevel++;
+            FindAnyObjectByType<UIManager>().ShowWavePopUp(waveLevel);
             difficultyTimer = 0f;
         }
 

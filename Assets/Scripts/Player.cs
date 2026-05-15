@@ -8,6 +8,7 @@ public class Player : Character, IDash
     [SerializeField] private Transform weaponMuzzle;
     [SerializeField] private float shootCountdown;
     [SerializeField] private float weaponPickupDuration = 11f;
+    [SerializeField] private ParticleSystem goldEffect;
 
     private Weapon defaultWeapon;
     private float weaponTimer;
@@ -117,7 +118,8 @@ public class Player : Character, IDash
     {
         invincibleOn = true;
         invincibilityTimer = invincibilityDuration;
-        spriteRenderer.color = Color.black;
+        spriteRenderer.color = new Color(1f, 0.84f, 0f);
+        goldEffect.Play();
 
         while (invincibilityTimer > 0f)
         {
@@ -127,7 +129,8 @@ public class Player : Character, IDash
 
         invincibleOn = false;
         invincibilityTimer = 0f;
-        spriteRenderer.color = Color.white;
+        spriteRenderer.color = Color.white;  
+        goldEffect.Stop();                
     }
 
     public bool InvincibleOn()
@@ -148,6 +151,7 @@ public class Player : Character, IDash
             invincibleOn = false;
             invincibilityTimer = 0f;
             spriteRenderer.color = Color.white;
+            goldEffect.Stop();
         }
 
         if (weaponTimer > 0f) 

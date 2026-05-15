@@ -7,15 +7,21 @@ public class NukeAnimationScript : MonoBehaviour
 {
 
     [SerializeField] private float flashDuration = 1f;
-    private Image nukeAnimationPic;
+    [SerializeField] AudioClip nukeSound;
+    [SerializeField] private Image nukeAnimationPic;
+
+    
+    private AudioSource nukeSource;
 
     private void Start()
     {
-        nukeAnimationPic = GetComponent<Image>();
+        
+        nukeSource = GetComponent<AudioSource>();
     }
 
     public void TriggerFlash()
     {
+        nukeSource.PlayOneShot(nukeSound);
         StartCoroutine(FlashCoroutine());
     }
 

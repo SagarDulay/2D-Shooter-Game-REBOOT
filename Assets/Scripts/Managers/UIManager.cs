@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -10,6 +11,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI highScoreTextValue;
     [SerializeField] private TextMeshProUGUI weaponTypeText;
     [SerializeField] private TextMeshProUGUI weaponTimerValue;
+    [SerializeField] private TextMeshProUGUI wavePopUpText;
+
 
     [Space(10)]
 
@@ -22,6 +25,7 @@ public class UIManager : MonoBehaviour
 
     [Space(10)]
 
+    [Header("Pause Screen")]
     [SerializeField] private GameObject pauseScreen;
     [SerializeField] private TextMeshProUGUI pauseCurrentScoreValue;
     [SerializeField] private TextMeshProUGUI pauseHighScoreValue;
@@ -74,4 +78,36 @@ public class UIManager : MonoBehaviour
         pauseCurrentScoreValue.text = "Current Score: " + localGameManager.GetCurrentScore().ToString();
         pauseHighScoreValue.text = "High Score: " + PlayerPrefs.GetInt("HighestScore").ToString();
     }
+
+    public void ShowWavePopUp(int waveLevel)
+    {
+        StartCoroutine(WavePopUpCoroutine(waveLevel));
+    }
+
+    private IEnumerator WavePopUpCoroutine(int waveLevel)
+    {
+        wavePopUpText.text = "Wave: " + waveLevel;
+        float elapsed = 0f;
+
+        while (elapsed < 0.5f)
+        {
+            elapsed += Time.deltaTime;
+            wavePopUpText.color = new Color(0.2f, 1f, 0.6f, elapsed / 0.5f);
+            yield return null;
+        }
+
+        yield return new WaitForSeconds(waveLevel);
+
+        elapsed = 0f;
+
+        while (elapsed < 0.5f)
+        {
+            elapsed += Time.deltaTime;
+            wavePopUpText.color = new Color(0.2f, 1f, 0.6f, 1 - (elapsed / 0.5f));
+
+        }
+
+        wavePopUpText.color = new Color(0.2f, 1f, 0.6f, 0f);
+    }
+
 }
