@@ -1,17 +1,13 @@
 fileFormatVersion: 2
-guid: 7432b5f8840b80643b4798bfec21df32
-AssetOrigin:
-  serializedVersion: 1
-  productId: 298577
-  packageName: Space Game GUI kit
-  packageVersion: 1.0
-  assetPath: Assets/Space_Exploration_GUI_Kit/Background_Images/extra large/background-1-extra-large.png
-  uploadId: 700894
+guid: 0c5f6c514b61365499b37a96a5ed00d3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -773703083565014257
-    second: background-1-extra-large_0
+      213: -4525396881475946700
+    second: 394670-200_0
+  - first:
+      213: -6589749507637186438
+    second: 394670-200_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -91,19 +87,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -118,6 +101,19 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -185,13 +181,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: background-1-extra-large_0
+      name: 394670-200_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 3840
-        height: 2160
+        x: 22
+        y: 115
+        width: 77
+        height: 77
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,8 +196,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f03ab7e05214345f0800000000000000
-      internalID: -773703083565014257
+      spriteID: 43737fb438f8231c0800000000000000
+      internalID: -4525396881475946700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 394670-200_1
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 9
+        width: 102
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a70fa7e9cb18c84a0800000000000000
+      internalID: -6589749507637186438
       vertices: []
       indices: 
       edges: []
@@ -220,7 +238,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      background-1-extra-large_0: -773703083565014257
+      394670-200_0: -4525396881475946700
+      394670-200_1: -6589749507637186438
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
